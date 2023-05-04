@@ -1,0 +1,33 @@
+
+h2 {
+    font-size: 3em;
+}
+
+.post {
+    container-type: inline-size;
+}
+@container (min-width: 700px) {
+    .card h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+.post2 {
+    container-type: inline-size;
+    container-name: post2;
+}
+@container post2 (min-width: 700px) {
+    .card2 h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.post3 {
+    container: post3 / inline-size;
+}
+@container post3 (min-width: 700px) {
+    .card3 h2 {
+        font-size: 1.5rem;
+    }
+}
