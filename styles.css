@@ -3,16 +3,19 @@ h2 {
     font-size: 3em;
 }
 
+/* Most basic implementation, This will query the nearest ancestor container*/
+
 .post {
     container-type: inline-size;
 }
 @container (min-width: 700px) {
     .card h2 {
         font-size: 1.5rem;
+        background-color: purple;
     }
 }
 
-
+/* Giving the container a name allowing you to specify the container you want to target */
 .post2 {
     container-type: inline-size;
     container-name: post2;
@@ -20,14 +23,18 @@ h2 {
 @container post2 (min-width: 700px) {
     .card2 h2 {
         font-size: 1.5rem;
+        background-color: blue;
     }
 }
 
+
+/* Short hand for defining name and container-type value */
 .post3 {
     container: post3 / inline-size;
 }
 @container post3 (min-width: 700px) {
     .card3 h2 {
         font-size: 1.5rem;
+        background-color: green;
     }
 }
